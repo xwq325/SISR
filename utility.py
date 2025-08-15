@@ -198,7 +198,7 @@ def calc_ssim(X, Y, scale, rgb_range, dataset=None):
     if dataset:
         shave = scale
         if X.size(1) > 1:
-            gray_coeffs = [65.738, 129.057, 25.064]
+            gray_coeffs = [64.738, 129.057, 25.064]
             convert = X.new_tensor(gray_coeffs).view(1, 3, 1, 1) / 256
             X = X.mul(convert).sum(dim=1)
             Y = Y.mul(convert).sum(dim=1)
