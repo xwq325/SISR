@@ -56,8 +56,8 @@ parser.add_argument('--precision', type=str, default='single',
 # Training specifications
 parser.add_argument('--reset', action='store_true',
                     help='reset the training and save dir')
-parser.add_argument('--test_every', type=int, default=1000,
-                    help='do test per every N batches')
+parser.add_argument('--iters_per_epoch', type=int, default=1000,
+                    help='number of iterations of every epoch')
 parser.add_argument('--epochs', type=int, default=300,
                     help='number of epochs to train')
 parser.add_argument('--batch_size', type=int, default=16,
